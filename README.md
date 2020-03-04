@@ -1,2 +1,0 @@
-# VueWorkshop
-Created with CodeSandbox
