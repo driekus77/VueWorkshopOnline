@@ -7,7 +7,7 @@
       >
     </div>
     <div class="logo col-2">
-      <i class="icon fas fa-hands-helping fa-3x" style="margin-top: 25px;transform: rotate(30deg);"></i>
+      <i class="icon fas fa-hands-helping fa-3x" style="margin-top: 5px;transform: rotate(30deg);"></i>
     </div>
     <div class="logo col-5">
       <img src="https://vuejs.org/images/logo.png" style="width:50%;">
@@ -45,7 +45,7 @@ export default {
   margin-bottom: 10px;
   padding: 10px;
   width: 50%;
-  height: 100px;
+  height: 65px;
   background-color: var(--bloemertdark-color);
   border-radius: 15px;
   box-shadow: 5px 5px 5px var(--bloemertshadow-color);

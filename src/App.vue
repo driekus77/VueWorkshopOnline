@@ -2,17 +2,9 @@
   <div id="app">
     <header class="header">
       <Logo/>
-      <h1>
-        Welcome to the
-        <span class="bloemert">Bloemert</span> -
-        <span class="vue">Vue.js</span> workshop!
-      </h1>
     </header>
 
-    <h2 style="margin:10px;">Step 1: Basics</h2>
-    <div class="content">
-      <p>Hier komt de StepX.md inhoud?</p>
-    </div>
+    <Steps/>
 
     <footer class="footer">
       <InfoLinks/>
@@ -21,13 +13,15 @@
 </template>
 
 <script>
-import Logo from "./components/Logo";
-import InfoLinks from "./components/InfoLinks";
+import Logo from "./components/Workshop/Logo";
+import Steps from "./components/Workshop/Steps";
+import InfoLinks from "./components/Workshop/InfoLinks";
 
 export default {
   name: "App",
   components: {
     Logo,
+    Steps,
     InfoLinks
   }
 };
@@ -75,12 +69,6 @@ body {
 
 .vue {
   color: var(--vue-color);
-}
-
-.content {
-  flex: 1 0 auto;
-  /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-  padding: 10px;
 }
 
 .footer {
