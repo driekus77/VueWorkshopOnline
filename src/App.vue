@@ -71,6 +71,11 @@ body {
   color: var(--vue-color);
 }
 
+.header {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
 .footer {
   flex-shrink: 0;
   /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */

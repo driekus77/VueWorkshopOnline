@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div id="StepSelector">
+    <div class="StepSelector">
       <label for="step">Choose a step:</label>
       <select id="step" v-model="currentStep">
         <option value="Step-0_Welcome_Goal.md">0. Welcome & Goals</option>
@@ -12,7 +12,7 @@
         <option value="Step-6_Next_Level.md">6. Next Level</option>
       </select>
     </div>
-    <Step :value="currentStep"/>
+    <Step class="CurrentStep" :value="currentStep"/>
   </div>
 </template>
 
@@ -37,7 +37,25 @@ export default {
   flex: 1 0 auto;
   /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
   padding: 10px;
+}
 
+.CurrentStep {
   text-align: left;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+}
+
+.StepSelector > label {
+  font-weight: bolder;
+  font-size: 12pt;
+  margin-right: 25px;
+}
+
+.StepSelector > select {
+  color: var(--bloemertdark-color);
+  font-weight: bolder;
+  font-size: 12pt;
+  border-style: none;
+  border-width: none;
 }
 </style>
