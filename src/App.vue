@@ -9,7 +9,10 @@
       </h1>
     </header>
 
-    <div class="content">Test</div>
+    <h2 style="margin:10px;">Step 1: Basics</h2>
+    <div class="content">
+      <p>Hier komt de StepX.md inhoud?</p>
+    </div>
 
     <footer class="footer">
       <InfoLinks/>
