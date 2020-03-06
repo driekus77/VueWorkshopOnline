@@ -53,7 +53,6 @@ export default {
 
 .CurrentStep > * {
   font-family: "Roboto";
-  font-size: 14pt;
 }
 
 .StepSelector > label {
