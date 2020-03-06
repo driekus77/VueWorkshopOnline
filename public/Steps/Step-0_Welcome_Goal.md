@@ -2,11 +2,19 @@
 
 We have a Vue.js teaser workshop set-up for you!
 
-### Overview
+This Workshop site: https://09bem.csb.app/
+
+## The main goals for this workshop are:
+
+- Show Vue.js its capabilities.
+- Get you interested in Vue.js
+- Have fun!
+
+## Overview
 
 The folowing Steps are prepared:
 
-0. Welcome & Goals.
+0. Welcome & Goals. (this step)
 1. Basics of Vue.js.
 1. Conditionals & Loops.
 1. Events & Data.
@@ -14,14 +22,13 @@ The folowing Steps are prepared:
 1. State Management.
 1. Next Level...
 
-Note: These info pages are also available, as markdown files, through Codesandbox its file explorer: '/public/Steps/Step-X_xxx.md'.
+Note: These Step pages are also available, as markdown files, through Codesandbox its file explorer: '/public/Steps/Step-X_xxx.md'.
 
-### The main goals of this workshop are:
+<i class="far fa-hand-point-down fa-2x"></i>
 
-- Show Vue.js its capabilities.
-- Get you interested in Vue.js
-- Have fun!
+## Case study: Create a simple Agenda App using the codesandbox.io website.
 
-### Case study: Along the way we try to create an Agenda App using the codesandbox.io website.
+Create an Agenda App with a few events and multiple components using databinding and more.
 
-Create an Agenda App with a few events and multiple components using databinding.
+To setup your own Sandbox use our **_bloemert-vuejs-workshop_** template at https://codesandbox.io/s/
+Your are going to work on a template of this Single Page Application (SPA) site which is also written with Vue.js

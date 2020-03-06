@@ -1,14 +1,14 @@
-## Step 1: Basics
+## Component(s)
 
-A Vue app is build up out of one or multiple components. A component contains 3 part:
+A Vue app is build out of one or multiple components. A component can contain 3 part:
 
-- HTML inside the template
-- Javascript as script
-- CSS/SCSS/SASS/LESS inside style
+- (X)HTML as markup template
+- Javascript or Typescript as scripting language
+- CSS/SCSS/SASS/LESS for styling
 
 These three parts can be provided in 2 ways:
 
-- Javascript/CSS files (.js/.css) as base:
+#### _Javascript/CSS files (.js/.css) as base:_
 
 ```javascript
 // src/components/App.js
@@ -24,33 +24,90 @@ export default {
 
 When to use: Above setup is easy to use in existing apps or when you don't want to use webpack!
 
-- Everything in a Single File Component (SFC):
+#### _Everything in a Single File Component (SFC):_
+
+file: Mycomponent.vue:
 
 ```html
 <template>
-  <div class="#app">...</div>
+  <div class="#app">
+    <componenta />
+    <componentb />
+    ...
+  </div>
 </template>
 
 <script>
+  import ComponentA from "./components/ComponentA";
+  import ComponentB from "./components/ComponentB";
+  ...
+
   export default {
-    name: "MyVueComponent",
-    components: ["SubComponentA", "SubComponentB", "SubComponentC"]
+    name: "MyComponent",
+    components: {
+      ComponentA,
+      ComponentB,
+      ...
+    }
   };
 </script>
 
 <style>
   #app {
-    color: blue;
+    background-color: var(--bloemertlight-color);
   }
 </style>
 ```
 
-Above SFC is the most used and the one we use in the rest of this workshop.
+Above SFC is the most used and the one we use together with HTML, Javascript and CSS, in the rest of this workshop.
 
-### Workshop assignment:
+## Properties
 
-    	Componenten
-    		App heeft al title component
-    		Deelnemer moet MonthView component aanmaken en toevoegen aan de app
-    	Properties
-    		Deelnemer voegt maand en jaar properties toe aan monthview component, component toont maand en jaar
+You can use properties to pass data from Parent to Child components.
+
+Usage in Parent:
+
+```html
+<template>
+  ...
+  <my-child myprop="mydata" />
+  ...
+</template>
+...
+```
+
+Definition in Child:
+
+```html
+...
+<script>
+  export default {
+    name: "my-child",
+    props: ["myprop"]
+  };
+</script>
+...
+```
+
+Inside the child's javascript a property can be accessed via this.myprop or in the HTML using double mustage syntax:
+
+```html
+<template>
+  <div>{{myprop}}</div>
+</template>
+```
+
+<i class="far fa-hand-point-down fa-2x"></i>
+
+## Todo(s):
+
+### Create 2 components
+
+- Create a AgendaApp component as replacement for the Steps component.
+  Hints: Create a new file named "AgendaApp.vue" and replace inside App.vue the Steps references with your new Component name.
+  Note: If you don't want to work with the SPA setup in App.vue you can also replace App.vue its implementation. Its up to you!
+- Create a MonthView component and add it too your AgendaApp.
+
+### Create 2 Properties
+
+- Add properties Month and Year too the MontView component and make sure that they are shown.

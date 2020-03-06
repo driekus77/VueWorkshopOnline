@@ -4,7 +4,9 @@
       <Logos/>
     </header>
 
-    <Steps style="height: calc(100% - 325px);margin-top:50px"/>
+    <div class="main-content">
+      <Steps/>
+    </div>
 
     <footer>
       <InfoLinks/>
@@ -33,5 +35,10 @@ export default {
   height: 100%;
   width: 100%;
   display: table;
+}
+
+.main-content {
+  height: calc(100% - 250px);
+  margin-top: 25px;
 }
 </style>

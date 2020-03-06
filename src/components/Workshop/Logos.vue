@@ -4,7 +4,7 @@
       <div class="logo col-5">
         <img
           src="https://www.bloemert.com/wp-content/uploads/2019/02/Logo-Bloemert-diap.png"
-          style="height:125px"
+          style="height:75px"
         >
       </div>
       <div class="logo col-2">
@@ -14,7 +14,7 @@
         ></i>
       </div>
       <div class="logo col-5">
-        <img src="https://vuejs.org/images/logo.png" style="height:125px;">
+        <img src="https://vuejs.org/images/logo.png" style="height:75px;">
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@ export default {
 <style>
 .row {
   display: flex;
-  height: 175px;
+  height: 100px;
 }
 
 .icon {
