@@ -51,10 +51,6 @@ export default {
   text-align: left;
 }
 
-.CurrentStep > * {
-  font-family: "Roboto";
-}
-
 .StepSelector > label {
   font-weight: bolder;
   font-size: 18pt;

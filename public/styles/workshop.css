@@ -13,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   overflow: hidden;
+  margin: 0px;
 }
 
 .wrapper {
@@ -31,7 +32,6 @@ body {
 
 header {
   padding: 10px;
-  height: 100px;
 }
 
 footer {
