@@ -2,7 +2,7 @@
 
 We have a Vue.js teaser workshop set-up for you!
 
-This Workshop site: https://09bem.csb.app/
+If you want to view the code for this documentation site, please use this link: [Ctrl-Click to open in new tab](https://codesandbox.io/embed/github/driekus77/VueWorkshop/tree/master/?fontsize=14&hidenavigation=1&theme=dark)
 
 ## The main goals for this workshop are:
 
@@ -22,7 +22,7 @@ The folowing Steps are prepared:
 1. State Management.
 1. Next Level...
 
-Note: These Step pages are also available, as markdown files, through Codesandbox its file explorer: '/public/Steps/Step-X_xxx.md'.
+Use the selector at the top of the page to navigate between the steps.
 
 <i class="far fa-hand-point-down fa-2x"></i>
 
@@ -30,5 +30,4 @@ Note: These Step pages are also available, as markdown files, through Codesandbo
 
 Create an Agenda App with a few events and multiple components using databinding and more.
 
-To setup your own Sandbox use our **_bloemert-vuejs-workshop_** template at https://codesandbox.io/s/
-Your are going to work on a template of this Single Page Application (SPA) site which is also written with Vue.js
+To setup your own Sandbox use our **_bloemert-vuejs-workshop_** [template (Ctrl-Click to open in new tab)](https://codesandbox.io/s/github/mrwatts/Vue-Workshop-Start).
