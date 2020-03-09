@@ -63,7 +63,5 @@ export default {
   color: var(--bloemertdark-color);
   font-weight: bolder;
   font-size: 18pt;
-  border-style: none;
-  border-width: none;
 }
 </style>
