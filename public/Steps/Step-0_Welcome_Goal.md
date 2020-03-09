@@ -2,7 +2,7 @@
 
 We have a Vue.js teaser workshop set-up for you!
 
-If you want to view the code for this documentation site, please use this link: [Ctrl-Click to open in new tab](https://codesandbox.io/embed/github/driekus77/VueWorkshop/tree/master/?fontsize=14&hidenavigation=1&theme=dark)
+If you want to view the code for this documentation site, please use this link: [Ctrl-Click to open in new tab](https://codesandbox.io/s/github/driekus77/VueWorkshop)
 
 ## The main goals for this workshop are:
 
