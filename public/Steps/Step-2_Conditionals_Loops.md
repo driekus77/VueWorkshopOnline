@@ -1,25 +1,37 @@
-## Declarative Rendering
+## Computed values, Conditionals & Loop directives
 
-From: https://vuejs.org/v2/guide/#Declarative-Rendering
-At the core of Vue.js is a system that enables us to declaratively render data to the DOM using straightforward template syntax:
+Computed values allow you to specify a function in the component that does something with the data before it is rendered to the DOM. For instance, you may specify a new property that is the result of adding up or concatenating two other properties, or you may call a function. For example:
 
 ```html
-<div id="myid">
-  {{ message }}
-</div>
+<template>
+  <div id="example">{{ reversedMessage }}</div>
+</template>
+
 <script>
-  var app = new Vue({
-    el: "#myid",
-    data() {
-      return {
-        message: "Hello Vue!"
-      };
+  var vm = new Vue({
+    el: "#example",
+    data: {
+      message: "Hello"
+    },
+    computed: {
+      reversedMessage: function() {
+        return this.message
+          .split("")
+          .reverse()
+          .join("");
+      }
     }
   });
 </script>
 ```
 
-## Conditionals & Loop directives
+As you can see, you can use properties in your computed value. You will need this later.
+
+### Conditional: v-if
+
+Conditionals and loops allow us to specify if, and how often, elements in our template are rendered.
+
+The v-if directive specifies a condition that must be met in order for the component on which the directive is placed, to render.
 
 **"v-if"** directive example:
 
@@ -29,15 +41,13 @@ At the core of Vue.js is a system that enables us to declaratively render data t
     <span v-if="seen">Now you see me</span>
   </div>
 </template>
-<script>
-  var app3 = new Vue({
-    el: "#app-3",
-    data: {
-      seen: true
-    }
-  });
-</script>
 ```
+
+Only if the property _seen_ of the component is _true_, will the text be displayed.
+
+### Loop: v-for
+
+The v-for directive can be used to iterate through a collection of values and render the element on which the directive is placed, for every item in the collection.
 
 **"v-for"** directive example:
 
@@ -51,6 +61,7 @@ At the core of Vue.js is a system that enables us to declaratively render data t
     </ol>
   </div>
 </template>
+
 <script>
   var app4 = new Vue({
     el: "#app-4",
@@ -69,13 +80,17 @@ At the core of Vue.js is a system that enables us to declaratively render data t
 
 ## Todo(s)
 
-### Use provided helper methods to generate a view of days per month.
+1. Add the days of the month to the monthview.
 
-e.g.:
+Hints:
+
+- Use the `getItemsPerMonth` helper function in a computed property.
+- Use v-for to iterate through the computed property
+- The `getItemsPerMonth` function returns the days in the month in a multiple of 7 items, so you can use a simple flex grid with items of a width of 14% to create a nice month view.
 
 ```html
 <script>
-  import { getFullMonthName, getCalendarMonth } from "../helpers";
+  import { getItemsPerMonth } from "../helpers";
   ...
 </script>
 ```
