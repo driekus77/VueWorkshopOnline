@@ -69,10 +69,13 @@ At the core of Vue.js is a system that enables us to declaratively render data t
 
 ## Todo(s)
 
-### Use provided methods to generate a view of days per month.
+### Use provided helper methods to generate a view of days per month.
 
-###
+e.g.:
 
-    Deelnemer maakt een loop v-for die de dagen van de maand genereert (1 - 28 / 29 / 30 / 31). N.B. deelnemers krijgen al js script die de dagen van de maand in een
-    array plaatst (met ook enkele dagen van de maand ervoor indien van toepassing)
-    Dagen van de vorige maand disabled m.b.v. v-if
+```html
+<script>
+  import { getFullMonthName, getCalendarMonth } from "../helpers";
+  ...
+</script>
+```

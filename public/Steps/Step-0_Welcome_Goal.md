@@ -7,7 +7,7 @@ This Workshop site: https://09bem.csb.app/
 ## The main goals for this workshop are:
 
 - Show Vue.js its capabilities.
-- Get you interested in Vue.js
+- Get you interessted in Vue.js
 - Have fun!
 
 ## Overview
