@@ -16,7 +16,7 @@ The folowing Steps are prepared:
 
 0. Welcome & Goals. (this step)
 1. Basics of Vue.js.
-1. Conditionals & Loops.
+1. Computed values, Conditionals & Loops.
 1. Events & Data.
 1. Data Binding.
 1. State Management.
@@ -24,10 +24,14 @@ The folowing Steps are prepared:
 
 Use the selector at the top of the page to navigate between the steps.
 
+## Case study: Create a simple Agenda App on codesandbox.io.
+
+Your app will use events, multiple components, databinding and more.
+
 <i class="far fa-hand-point-down fa-2x"></i>
 
-## Case study: Create a simple Agenda App using the codesandbox.io website.
+## Todo(s):
 
-Create an Agenda App with a few events and multiple components using databinding and more.
+Setup your own Sandbox use our **_bloemert-vuejs-workshop_** [template (Ctrl-Click to open in new tab)](https://codesandbox.io/s/github/mrwatts/Vue-Workshop-Start).
 
-To setup your own Sandbox use our **_bloemert-vuejs-workshop_** [template (Ctrl-Click to open in new tab)](https://codesandbox.io/s/github/mrwatts/Vue-Workshop-Start).
+The template contains an (almost) empty App. Some helper functions you will use during the workshop have been added so you can concentrate on working with Vue.js.

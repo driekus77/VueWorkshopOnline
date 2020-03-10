@@ -8,7 +8,9 @@
             <select id="step" v-model="currentStep">
               <option value="Step-0_Welcome_Goal.md">Step 0 - Welcome & Goals</option>
               <option value="Step-1_Basics.md">Step 1 - Basics</option>
-              <option value="Step-2_Conditionals_Loops.md">Step 2 - Conditionals & Loops</option>
+              <option
+                value="Step-2_Conditionals_Loops.md"
+              >Step 2 - Computed values, Conditionals & Loops</option>
               <option value="Step-3_Events_Data.md">Step 3 - Events & Data</option>
               <option value="Step-4_Data_Binding.md">Step 4 - Data Binding</option>
               <option value="Step-5_State_Management.md">Step 5 - State Management</option>
