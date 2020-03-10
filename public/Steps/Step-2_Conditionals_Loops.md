@@ -45,6 +45,32 @@ The v-if directive specifies a condition that must be met in order for the compo
 
 Only if the property _seen_ of the component is _true_, will the text be displayed.
 
+### Conditional attributes
+
+In Vue.js, you can also use conditions in attributes by using the v-bind directive to bind the DOM attribute to a component property:
+
+```html
+<div v-bind:class="{ active: isActive }">
+  Element active: {{ isActive }}
+</div>
+```
+
+Note: you can also abbreviate (shorthand) v-bind as follows:
+
+```html
+<div :class="{ active: isActive }">
+  Element active: {{ isActive }}
+</div>
+```
+
+And you can also combine standard attributes and bound ones:
+
+```html
+<div class="element" :class="{ active: isActive }">
+  Element active: {{ isActive }}
+</div>
+```
+
 ### Loop: v-for
 
 The v-for directive can be used to iterate through a collection of values and render the element on which the directive is placed, for every item in the collection.
@@ -55,7 +81,7 @@ The v-for directive can be used to iterate through a collection of values and re
 <template>
   <div id="app-4">
     <ol>
-      <li v-for="todo in todos">
+      <li :key="todo.id" v-for="todo in todos">
         {{ todo.text }}
       </li>
     </ol>
@@ -67,26 +93,31 @@ The v-for directive can be used to iterate through a collection of values and re
     el: "#app-4",
     data: {
       todos: [
-        { text: "Learn JavaScript" },
-        { text: "Learn Vue" },
-        { text: "Build something awesome" }
+        { id: 1, text: "Learn JavaScript" },
+        { id: 2, text: "Learn Vue" },
+        { id: 3, text: "Build something awesome" }
       ]
     }
   });
 </script>
 ```
 
+Note that, when creating elements in a loop, every (root) element you create requires a unique key, just as in Angular and React.
+
 <i class="far fa-hand-point-down fa-2x"></i>
 
 ## Todo(s)
 
-1. Add the days of the month to the monthview.
+### 1. Create a _computed property_ that gets the name of the month.
+
+- Use the `getFullMonthName` helper function in a _computed property_ named _monthName_. The `getFullMonthName` function can be found in helpers.js and expects a single parameter: month.
+- Display the month name in the header of your component.
+
+### 2. Add the days of the month to the monthview.
 
 Hints:
 
-- Use the `getItemsPerMonth` helper function in a computed property.
-- Use v-for to iterate through the computed property
-- The `getItemsPerMonth` function returns the days in the month in a multiple of 7 items, so you can use a simple flex grid with items of a width of 14% to create a nice month view.
+- Use the `getItemsPerMonth` helper function in a _computed property_. The `getItemsPerMonth` function can be found in helpers.js and expects two parameters: year and month.
 
 ```html
 <script>
@@ -94,3 +125,35 @@ Hints:
   ...
 </script>
 ```
+
+- Use v-for to iterate through the computed property
+- The `getItemsPerMonth` function returns the days in the month in a multiple of 7 items (a week), starting on monday, so you can use a simple flex grid with items of a width of 14% to create a nice month view. You may copy the style below if you like:
+- The objects returned by `getItemsPerMonth` have a date property which is a moment.js date. You can get the day of the month as follows: `item.date.date()`
+
+```html
+<style>
+  .month {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .day {
+    width: 14%;
+    height: 2em;
+    line-height: 2em;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgba(2, 21, 49, 0.95);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .day.valid {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+</style>
+```
+
+### 3. Apply the _.valid_ class to days that are in the selected month.
+
+Hint: the `isInReqMonth` property returns true if the day is in the selected month

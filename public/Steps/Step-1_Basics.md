@@ -113,9 +113,9 @@ More details about declarative rendering can be found at: (<https://vuejs.org/v2
 
 ## Todo(s):
 
-### Create 2 components
+### 1. Create 2 components
 
-1. Create an AgendaApp component as replacement for the HelloWorld component (you can find this component in the /src/components folder).
+1. Create an Agenda component as replacement for the HelloWorld component (you can find this component in the /src/components folder).
 
 Hints:
 
@@ -125,6 +125,6 @@ Hints:
 
 2. Create a MonthView component and use it in your Agenda component.
 
-### Create 2 Properties
+### 2. Create 2 Properties
 
 - Add properties _month_ and _year_ to the MonthView component, set them from the Agenda component and make sure that they are shown.
