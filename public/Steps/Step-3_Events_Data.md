@@ -90,6 +90,6 @@ Hint: in properties, you do not need to include `this` when referencing state.
 
 ### 3. Let the _Appointments_ component show the selected date
 
-- Emit a _selecteddatechanged_ event up from the _MonthView_ component to the _Agenda_ component.
+- Emit a _selecteddatechanged_ event up from the _MonthView_ component to the _Agenda_ component. Hint: do not pass the moment.js object in the event, but a javascript Date (a moment.js object can be converted to a javascript date using the `.toDate()` method).
 - Store the selected date in the state of the agenda component
 - Add a date property to the _Appointments_ component and set it from the _Agenda_ component
