@@ -7,7 +7,7 @@ If you want to view the code for this documentation site, please use this link: 
 ## The main goals for this workshop are:
 
 - Show Vue.js its capabilities.
-- Get you interessted in Vue.js
+- Get you interested in Vue.js
 - Have fun!
 
 ## Overview

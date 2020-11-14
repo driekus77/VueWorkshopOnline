@@ -5,15 +5,23 @@
         <div class="inner">
           <div class="StepSelector">
             <label for="step">Choose a step:</label>
-            <select id="step" v-model="currentStep">
-              <option value="Step-0_Welcome_Goal.md">Step 0 - Welcome & Goals</option>
+            <select id="step" v-model="currentStep" @change="stepChange">
+              <option value="Step-0_Welcome_Goal.md">
+                Step 0 - Welcome & Goals
+              </option>
               <option value="Step-1_Basics.md">Step 1 - Basics</option>
-              <option
-                value="Step-2_Conditionals_Loops.md"
-              >Step 2 - Computed values, Conditionals & Loops</option>
-              <option value="Step-3_Events_Data.md">Step 3 - Events & Data</option>
-              <option value="Step-4_Data_Binding.md">Step 4 - Data Binding</option>
-              <option value="Step-5_State_Management.md">Step 5 - State Management</option>
+              <option value="Step-2_Conditionals_Loops.md">
+                Step 2 - Computed values, Conditionals & Loops
+              </option>
+              <option value="Step-3_Events_Data.md">
+                Step 3 - Events & Data
+              </option>
+              <option value="Step-4_Data_Binding.md">
+                Step 4 - Data Binding
+              </option>
+              <option value="Step-5_State_Management.md">
+                Step 5 - State Management
+              </option>
               <option value="Step-6_Next_Level.md">Step 6 - Next Level</option>
             </select>
           </div>
@@ -23,8 +31,8 @@
 
     <div class="content">
       <div class="inner">
-        <div class="scrollable">
-          <Step class="CurrentStep" :value="currentStep"/>
+        <div ref="stepScroller" class="scrollable">
+          <Step class="CurrentStep" :value="currentStep" />
         </div>
       </div>
     </div>
@@ -38,12 +46,17 @@ export default {
   name: "Steps",
   data() {
     return {
-      currentStep: "Step-0_Welcome_Goal.md"
+      currentStep: "Step-0_Welcome_Goal.md",
     };
   },
   components: {
-    Step
-  }
+    Step,
+  },
+  methods: {
+    stepChange: function (evt) {
+      this.$refs.stepScroller.scrollTop = 0;
+    },
+  },
 };
 </script>
 
