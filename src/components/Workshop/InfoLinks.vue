@@ -55,6 +55,24 @@
           >cheat-sheet</a
         >
       </li>
+      <li>
+        <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener"
+          >nodejs/npm</a
+        >
+      </li>
+      <li>
+        <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener"
+          >nodejs/npm</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://cli.vuejs.org/guide/installation.html"
+          target="_blank"
+          rel="noopener"
+          >vue cli</a
+        >
+      </li>
     </ul>
   </div>
 </template>

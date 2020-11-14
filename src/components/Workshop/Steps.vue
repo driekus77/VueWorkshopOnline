@@ -23,6 +23,9 @@
                 Step 5 - State Management
               </option>
               <option value="Step-6_Next_Level.md">Step 6 - Next Level</option>
+              <option value="Step-9_Use_Vue_CLI.md">
+                Step 9 - Use Vue CLI
+              </option>
             </select>
           </div>
         </div>
